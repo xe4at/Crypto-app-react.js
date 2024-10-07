@@ -7,5 +7,11 @@ const getCoinList = (page, currency) =>
 const searchCoin = (query) =>
   `${BASE_URL}/search?query=${query}&x_cg_demo_api_key=${API_KEY}`;
 
+const marketChart = (coin) =>
+  `${BASE_URL}/coins/${coin}/market_chart?vs_currency=usd&days=7`;
 
-export { getCoinList ,searchCoin};
+export { getCoinList, searchCoin ,marketChart};
+
+// curl --request GET \
+//      --url 'https://pro-api.coingecko.com/api/v3/coins/id/market_chart?days=7' \
+//      --header 'accept: application/json'
