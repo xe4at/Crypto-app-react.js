@@ -17,7 +17,7 @@ function Pagination({ page, setPage }) {
         onClick={previousHandler}
         className={page == 1 ? styles.disabled : null}
       >
-        previous
+        back
       </button>
       <p className={page == 1 ? styles.selected : null}>1</p>
       <p className={page == 2 ? styles.selected : null}>2</p>
