@@ -8,10 +8,17 @@
   border-radius: 10px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
   transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+  flex-wrap: wrap;
 }
 
 .header:hover {
   transform: scale(1.02);
+}
+
+.header .nav-links {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
 }
 
 .header a {
@@ -25,9 +32,8 @@
 }
 
 .header a:hover {
-  background-color: #304ffe;
   color: #ffffff;
-  transform: translateY(-3px);
+  transform: translateY(-1px);
 }
 
 .header a::after {
@@ -52,4 +58,26 @@
   border-radius: 10px;
   color: #ffffff;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    padding: 10px 20px;
+  }
+
+  .header .nav-links {
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .header a {
+    flex: 1;
+    text-align: center;
+    padding: 8px;
+    font-size: 0.9rem;
+  }
 }
