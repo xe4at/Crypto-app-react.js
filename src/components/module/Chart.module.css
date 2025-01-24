@@ -5,10 +5,15 @@
   width: 100%;
   height: 100%;
   backdrop-filter: blur(3px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .cross {
-  display: inline-block;
+  position: absolute;
+  top: 45px;
+  right: 30px;
   font-size: 1.5rem;
   font-weight: 700;
   background-color: #d33636;
@@ -17,12 +22,19 @@
   height: 30px;
   line-height: 30px;
   text-align: center;
-  margin: 30px 0 0 30px;
   border-radius: 5px;
+  z-index: 2;
   cursor: pointer;
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.cross:hover {
+  background-color: #ff4c4c;
+  transform: rotate(90deg);
 }
 
 .chart {
+  position: relative;
   width: 800px;
   margin: auto;
   padding: 20px;
@@ -31,9 +43,8 @@
   border: 2px solid #404042;
   border-radius: 20px;
 }
-
 .graph {
-  width: 760px;
+  width: 100%;
   height: 300px;
 }
 
@@ -46,16 +57,25 @@
 .name img {
   width: 40px;
   height: 40px;
-  margin-right: 20px;
+  margin-right: 10px;
+  border-radius: 50%; 
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
 }
 
 .name p {
   font-size: 1.5rem;
   font-weight: 700;
+  color: #ffffff; 
+  margin: 0; 
 }
+
 
 .types {
   margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
 }
 
 .types button {
@@ -64,18 +84,25 @@
   border: 1px solid #3874ff;
   color: #3874ff;
   font-size: 1rem;
-  padding: 5px 10px;
+  padding: 10px 15px;
   border-radius: 5px;
   cursor: pointer;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.types button:hover {
+  background-color: #3874ff;
+  color: #ffffff;
 }
 
 .types .selected {
   background-color: #3874ff;
-  color: #fff;
+  color: #ffffff;
 }
 
 .details {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   margin: 30px 20px 0;
 }
@@ -85,8 +112,49 @@
   font-size: 1.1rem;
 }
 
-.details p{
+.details p {
   margin-right: 7px;
   color: #3874ff;
   font-weight: 700;
+}
+
+@media (max-width: 768px) {
+  .chart {
+    width: 95%;
+    margin-top: 20px;
+  }
+
+  .name {
+    margin-left: 10px;
+    align-items: flex-start;
+  }
+
+  .name p {
+    font-size: 1.2rem;
+  }
+
+  .types {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .types button {
+    width: 80%;
+    margin: 5px 0;
+    padding: 8px 12px;
+    font-size: 0.9rem;
+  }
+
+  .details {
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 10px 0;
+  }
+
+  .details div {
+    font-size: 1rem;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
 }
