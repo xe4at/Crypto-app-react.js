@@ -20,7 +20,7 @@ function TableCoin({ coins, isLoading, setChart }) {
               <th>Price</th>
               <th>24h</th>
               <th>Total Volume</th>
-              <th></th>
+              <th>chart</th>
             </tr>
           </thead>
           <tbody>

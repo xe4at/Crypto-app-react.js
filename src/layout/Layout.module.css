@@ -4,7 +4,7 @@
   justify-content: space-between;
   background: linear-gradient(90deg, #1a243c, #304ffe);
   padding: 15px 30px;
-  margin-bottom: 150px;
+  margin-bottom: 15px;
   border-radius: 10px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
   transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
